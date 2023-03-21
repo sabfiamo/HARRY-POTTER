@@ -8,11 +8,11 @@ import ListCharacter from "./ListCharacter";
 
 function App() {
   const [characterList, setCharacterList] = useState([]);
-  const [houseFilter, setHouseFilter] = useState("gryffindor");
+  const [houseFilter, setHouseFilter] = useState("Gryffindor");
+  const [nameFilter, setNameFilter] = useState("");
 
   useEffect(() => {
     getDataApi(houseFilter).then((cleanData) => {
-      console.log(cleanData);
       setCharacterList(cleanData);
     });
   }, [houseFilter]);
@@ -20,9 +20,19 @@ function App() {
   const handleFilterHouse = (value) => {
     setHouseFilter(value);
   };
-  const characterFiltered = characterList.filter((eachCharacter) => {
-    return eachCharacter.house === houseFilter;
-  });
+  const handleFilterName = (value) => {
+    setNameFilter(value);
+  };
+  const characterFiltered = characterList
+    .filter((eachCharacter) => {
+      return eachCharacter.house === houseFilter;
+    })
+    .filter((eachCharacter) => {
+      return nameFilter
+        ? eachCharacter.name.includes(nameFilter)
+        : eachCharacter;
+    });
+
   return (
     <div className="App">
       {
@@ -32,7 +42,8 @@ function App() {
           <main className="main">
             <Filters
               handleFilterHouse={handleFilterHouse}
-              // cities={getCities()}
+              handleFilterName={handleFilterName}
+              nameFilter={nameFilter}
             />
             <ListCharacter characterList={characterFiltered} />
           </main>

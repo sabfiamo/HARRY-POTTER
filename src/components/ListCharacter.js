@@ -5,8 +5,8 @@ function ListCharacter({ characterList }) {
     return <Character eachCharacter={eachCharacter} key={eachCharacter.id} />;
   });
   return (
-    <section class="list">
-      <ul class="cards">{dataHtml}</ul>
+    <section className="list">
+      <ul className="cards">{dataHtml}</ul>
     </section>
   );
 }

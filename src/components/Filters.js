@@ -1,12 +1,15 @@
-// import FilterCity from "./FilterCity";
+import FilterName from "./FilterName";
 import FilterHouse from "./FilterHouse";
 
-function Filters({ handleFilterHouse }) {
+function Filters({ handleFilterHouse, handleFilterName, nameFilter }) {
   return (
     <section className="filter">
       <form>
         <FilterHouse handleFilterHouse={handleFilterHouse} />
-        {/* <FilterCity cities={cities} /> */}
+        <FilterName
+          handleFilterName={handleFilterName}
+          nameFilter={nameFilter}
+        />
       </form>
     </section>
   );

@@ -1,9 +1,9 @@
 function Character({ eachCharacter }) {
   return (
-    <li class="card">
+    <li className="card">
       <a href=".">
         <img
-          class="card__img"
+          className="card__img"
           src={
             eachCharacter.image
               ? eachCharacter.image
@@ -12,11 +12,11 @@ function Character({ eachCharacter }) {
           alt="Foto de personaje de Harry Potter"
           title="Foto de personaje de HArry Potter"
         ></img>
-        <h4 class="card__title">{eachCharacter.name}</h4>
-        <p class="card__description">{eachCharacter.alive}</p>
-        <p class="card__description">{eachCharacter.species}</p>
-        <p class="card__description">{eachCharacter.gender}</p>
-        <p class="card__description">{eachCharacter.house}</p>
+        <h4 className="card__title">{eachCharacter.name}</h4>
+        <p className="card__description">{eachCharacter.alive}</p>
+        <p className="card__description">{eachCharacter.species}</p>
+        <p className="card__description">{eachCharacter.gender}</p>
+        <p className="card__description">{eachCharacter.house}</p>
       </a>
     </li>
   );
