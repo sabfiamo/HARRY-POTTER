@@ -2,6 +2,8 @@ import "../styles/App.scss";
 import { useEffect, useState } from "react";
 import { Route, Routes, useLocation, matchPath } from "react-router-dom";
 
+import logoHarryPotter from "../images/harry-potter-logo.png";
+
 import getDataApi from "../services/api";
 import Filters from "./Filters";
 import ListCharacter from "./ListCharacter";
@@ -36,7 +38,9 @@ function App() {
         ? eachCharacter.name.toLowerCase().includes(nameFilter.toLowerCase())
         : eachCharacter;
     });
-  //
+
+  //Ordenar por nombre
+  characterFiltered.sort((a, b) => a.name.localeCompare(b.name));
 
   // conseguir el id de la ruta
   const { pathname } = useLocation();
@@ -51,7 +55,13 @@ function App() {
       {
         /* Aquí va el HTML */
         <>
-          <h1 className="title--big">Harry Potter</h1>
+          <header className="header">
+            <img
+              className="header--image"
+              src={logoHarryPotter}
+              alt="Logo de HarryPotter"
+            />
+          </header>
           <main className="main">
             <Routes>
               <Route
@@ -63,7 +73,10 @@ function App() {
                       handleFilterName={handleFilterName}
                       nameFilter={nameFilter}
                     />
-                    <ListCharacter characterList={characterFiltered} />
+                    <ListCharacter
+                      characterList={characterFiltered}
+                      nameFilter={nameFilter}
+                    />
                   </>
                 }
               />
