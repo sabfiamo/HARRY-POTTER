@@ -5,18 +5,18 @@ function FilterName({ handleFilterName, nameFilter }) {
   };
 
   return (
-    <>
-      <label className="form__label " htmlFor="house">
-        Nombre:
+    <div>
+      <label className="form--label " htmlFor="house">
+        Busca por personaje:
+        <input
+          className="form--input__text"
+          name="name"
+          id="name"
+          onChange={handleChange}
+          value={nameFilter}
+        ></input>
       </label>
-      <input
-        className="form__input-text"
-        name="name"
-        id="name"
-        onChange={handleChange}
-        value={nameFilter}
-      ></input>
-    </>
+    </div>
   );
 }
 export default FilterName;

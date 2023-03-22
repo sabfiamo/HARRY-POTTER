@@ -5,22 +5,30 @@ function FilterHouse({ handleFilterHouse }) {
   };
 
   return (
-    <>
-      <label className="form__label " htmlFor="house">
+    <div>
+      <label className="form--label " htmlFor="house">
         Selecciona la casa:
+        <select
+          className="form--input__text"
+          name="house"
+          id="house"
+          onChange={handleChange}
+        >
+          <option className="form--input__option" value="Gryffindor">
+            Gryffindor
+          </option>
+          <option className="form--input__option" value="Hufflepuff">
+            Hufflepuff
+          </option>
+          <option className="form--input__option" value="Ravenclaw">
+            Ravenclaw
+          </option>
+          <option className="form--input__option" value="Slytherin">
+            Slytherin
+          </option>
+        </select>
       </label>
-      <select
-        className="form__input-text"
-        name="house"
-        id="house"
-        onChange={handleChange}
-      >
-        <option value="Gryffindor">Gryffindor</option>
-        <option value="Hufflepuff">Hufflepuff </option>
-        <option value="Ravenclaw">Ravenclaw </option>
-        <option value="Slytherin">Slytherin</option>
-      </select>
-    </>
+    </div>
   );
 }
 export default FilterHouse;

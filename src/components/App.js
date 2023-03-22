@@ -1,6 +1,7 @@
 import "../styles/App.scss";
 import { useEffect, useState } from "react";
-import { Route, Routes, useLocation, matchPath } from "react-router-dom";
+// import { Route, Routes, useLocation, matchPath } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import logoHarryPotter from "../images/harry-potter-logo.png";
 
@@ -43,13 +44,12 @@ function App() {
   characterFiltered.sort((a, b) => a.name.localeCompare(b.name));
 
   // conseguir el id de la ruta
-  const { pathname } = useLocation();
-  const routeData = matchPath("character/:id", pathname);
-  const characterId = routeData === null ? null : routeData.params.id;
-  const characterFound = characterList.find(
-    (eachCharacter) => eachCharacter.id === characterId
-  );
-
+  const findCharacter = (characterId) => {
+    const characterFound = characterList.find(
+      (eachCharacter) => eachCharacter.id === characterId
+    );
+    return characterFound;
+  };
   return (
     <div className="App">
       {
@@ -64,6 +64,10 @@ function App() {
           </header>
           <main className="main">
             <Routes>
+              <Route
+                path="/character/:id"
+                element={<CharacterDetail findCharacter={findCharacter} />}
+              />
               <Route
                 path="/"
                 element={
@@ -80,10 +84,7 @@ function App() {
                   </>
                 }
               />
-              <Route
-                path="/character/:id"
-                element={<CharacterDetail characterFound={characterFound} />}
-              />
+
               <Route path="*" element="Error 404: page not found" />
             </Routes>
           </main>

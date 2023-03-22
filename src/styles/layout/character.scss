@@ -1,0 +1,36 @@
+.character {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 400px;
+
+  &--li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin-bottom: 25px;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: rgb(218, 139, 60);
+    overflow: hidden;
+    width: 420px;
+  }
+  &--link {
+    text-decoration: none;
+  }
+  &--img {
+    width: 100%;
+  }
+
+  &--title {
+    color: white;
+    padding: 8px 20px 5px 20px;
+    font-size: 1.8rem;
+  }
+  &--description {
+    color: white;
+    padding: 0 20px 8px 20px;
+
+    font-size: 1.4rem;
+  }
+}

@@ -1,17 +1,13 @@
 import Character from "./Character";
 
 function ListCharacter({ characterList, nameFilter }) {
-  //No existen valores coincidentes
-  // if (!characterFiltered.length) {
-  //   mesaggeError = "No hay ningún personaje que coincida con la palabra ";
-  //   mesaggeError += nameFilter;
-
+  let mesaggeError = "";
   let dataHtml = characterList.map((eachCharacter) => {
     return <Character eachCharacter={eachCharacter} key={eachCharacter.id} />;
   });
   console.log(dataHtml);
-  if (!dataHtml.length) {
-    let mesaggeError = "No hay ningún personaje que coincida con el nombre: ";
+  if (!dataHtml.length && nameFilter) {
+    mesaggeError = "No hay ningún personaje que coincida con el nombre: ";
     mesaggeError += nameFilter;
 
     return (
@@ -21,8 +17,8 @@ function ListCharacter({ characterList, nameFilter }) {
     );
   } else {
     return (
-      <section className="list">
-        <ul className="cards">{dataHtml}</ul>
+      <section>
+        <ul className="character">{dataHtml}</ul>
       </section>
     );
   }

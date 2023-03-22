@@ -1,42 +1,58 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+
 import "../styles/page/characterDetails.scss";
 
-function CharacterDetails({ characterFound }) {
+function CharacterDetails({ findCharacter }) {
+  const allParams = useParams();
+  const characterId = allParams.id;
+  const characterFound = findCharacter(characterId);
+
+  if (!characterFound) {
+    return (
+      <article className="detail--article">
+        <h2 className="detail--article__term">Personaje no disponible</h2>
+        <p className="detail--article__term">
+          <Link to="/">Volver</Link>
+        </p>
+      </article>
+    );
+  }
+
   return (
-    <div className="character">
-      <Link className="character--button" to="/">
+    <div className="detail">
+      <Link className="detail--button" to="/">
         Volver
       </Link>
-      <article className="character--article">
+      <article className="detail--article">
         <img
-          className="character--article__img"
+          className="detail--article__img"
           src={characterFound.image}
           alt="Imagen del personaje"
         />
-        <ul className="character--article__list">
-          <li className="character--article__term">{characterFound.name}</li>
-          <li className="character--article__term">
+        <ul className="detail--article__list">
+          <li className="detail--article__term">{characterFound.name}</li>
+          <li className="detail--article__term">
             Estatus:
-            <span className="character--article__term">
+            <span className="detail--article__term">
               {characterFound.alive}
             </span>
           </li>
-          <li className="character--article__term">
+          <li className="detail--article__term">
             Especie:
-            <span className="character--article__term">
+            <span className="detail--article__term">
               {characterFound.species}
             </span>
           </li>
 
-          <li className="character--article__term">
+          <li className="detail--article__term">
             Genero:
-            <span className="character--article__term">
+            <span className="detail--article__term">
               {characterFound.gender}
             </span>
           </li>
-          <li className="character--article__term">
+          <li className="detail--article__term">
             Casa:
-            <span className="character--article__term">
+            <span className="detail--article__term">
               {characterFound.house}
             </span>
           </li>
@@ -45,4 +61,5 @@ function CharacterDetails({ characterFound }) {
     </div>
   );
 }
+
 export default CharacterDetails;

@@ -3,13 +3,13 @@ import FilterHouse from "./FilterHouse";
 
 function Filters({ handleFilterHouse, handleFilterName, nameFilter }) {
   return (
-    <section className="filter">
-      <form>
-        <FilterHouse handleFilterHouse={handleFilterHouse} />
+    <section>
+      <form className="form">
         <FilterName
           handleFilterName={handleFilterName}
           nameFilter={nameFilter}
         />
+        <FilterHouse handleFilterHouse={handleFilterHouse} />
       </form>
     </section>
   );
