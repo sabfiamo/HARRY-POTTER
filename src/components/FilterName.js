@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 function FilterName({ handleFilterName, nameFilter }) {
   const handleChange = (ev) => {
     const value = ev.target.value;
@@ -19,4 +20,8 @@ function FilterName({ handleFilterName, nameFilter }) {
     </div>
   );
 }
+FilterName.propTypes = {
+  handleFilterName: PropTypes.func.isRequired,
+  nameFilter: PropTypes.string.isRequired,
+};
 export default FilterName;

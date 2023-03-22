@@ -1,4 +1,5 @@
 import Character from "./Character";
+import PropTypes from "prop-types";
 
 function ListCharacter({ characterList, nameFilter }) {
   let mesaggeError = "";
@@ -23,4 +24,8 @@ function ListCharacter({ characterList, nameFilter }) {
     );
   }
 }
+ListCharacter.propTypes = {
+  characterList: PropTypes.array.isRequired,
+  nameFilter: PropTypes.string.isRequired,
+};
 export default ListCharacter;

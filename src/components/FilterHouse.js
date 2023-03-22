@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 function FilterHouse({ handleFilterHouse }) {
   const handleChange = (ev) => {
     const value = ev.target.value;
@@ -31,4 +32,7 @@ function FilterHouse({ handleFilterHouse }) {
     </div>
   );
 }
+FilterHouse.propTypes = {
+  handleFilterHouse: PropTypes.func.isRequired,
+};
 export default FilterHouse;

@@ -1,5 +1,6 @@
 import FilterName from "./FilterName";
 import FilterHouse from "./FilterHouse";
+import PropTypes from "prop-types";
 
 function Filters({
   handleFilterHouse,
@@ -19,4 +20,10 @@ function Filters({
     </section>
   );
 }
+Filters.propTypes = {
+  handleFilterName: PropTypes.func.isRequired,
+  handleFilterHouse: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  nameFilter: PropTypes.string.isRequired,
+};
 export default Filters;

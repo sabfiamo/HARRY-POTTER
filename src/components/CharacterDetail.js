@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function CharacterDetails({ findCharacter }) {
   const allParams = useParams();
@@ -79,5 +80,7 @@ function CharacterDetails({ findCharacter }) {
     </div>
   );
 }
-
+CharacterDetails.propTypes = {
+  findCharacter: PropTypes.func.isRequired,
+};
 export default CharacterDetails;

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function Character({ eachCharacter }) {
   return (
@@ -19,4 +20,7 @@ function Character({ eachCharacter }) {
     </Link>
   );
 }
+Character.propTypes = {
+  eachCharacter: PropTypes.object.isRequired,
+};
 export default Character;
