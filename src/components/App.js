@@ -1,6 +1,5 @@
 import "../styles/App.scss";
 import { useEffect, useState } from "react";
-// import { Route, Routes, useLocation, matchPath } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 
 import logoHarryPotter from "../images/harry-potter-logo.png";
@@ -27,6 +26,9 @@ function App() {
   };
   const handleFilterName = (value) => {
     setNameFilter(value);
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
   };
 
   //filtrado por párametros de entrada
@@ -76,6 +78,7 @@ function App() {
                       handleFilterHouse={handleFilterHouse}
                       handleFilterName={handleFilterName}
                       nameFilter={nameFilter}
+                      handleSubmit={handleSubmit}
                     />
                     <ListCharacter
                       characterList={characterFiltered}

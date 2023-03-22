@@ -12,7 +12,7 @@ function translate(data) {
   data.alive = aliveSpanish;
   switch (data.species.toLowerCase()) {
     case "human": {
-      data.species = "Humano";
+      data.species = "Humana";
       return data;
     }
     case "half-giant": {

@@ -1,10 +1,15 @@
 import FilterName from "./FilterName";
 import FilterHouse from "./FilterHouse";
 
-function Filters({ handleFilterHouse, handleFilterName, nameFilter }) {
+function Filters({
+  handleFilterHouse,
+  handleFilterName,
+  nameFilter,
+  handleSubmit,
+}) {
   return (
     <section>
-      <form className="form">
+      <form className="form" onSubmit={handleSubmit}>
         <FilterName
           handleFilterName={handleFilterName}
           nameFilter={nameFilter}
