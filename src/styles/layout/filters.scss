@@ -8,27 +8,41 @@
   &--label {
     margin: 0 0 1px 0;
     padding: 5px 5px 5px 0;
-    font-size: 1.9rem;
+    font-size: 1.2rem;
     color: white;
     display: flex;
-    width: 500px;
+
     justify-content: space-between;
     align-items: center;
+    width: 220px;
+    @media (min-width: 768px) {
+      width: 500px;
+      font-size: 1.9rem;
+    }
   }
   &--input__text {
-    margin: 5px;
-    padding: 8px;
+    margin: 2px;
+    padding: 3px;
     border-radius: 4px;
     border: 0.8px solid rgb(218, 139, 60);
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     outline: none;
     background-color: grey;
     color: white;
-    width: 300px;
+    width: 90px;
+    @media (min-width: 768px) {
+      width: 300px;
+      font-size: 1.7rem;
+      padding: 8px;
+      margin: 5px;
+    }
   }
   &--input__option {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     background-color: grey;
     color: white;
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
 }

@@ -12,7 +12,9 @@ function CharacterDetails({ findCharacter }) {
           Volver
         </Link>
         <article className="detail--article">
-          <p className="detail--article__error">Personaje no disponible</p>
+          <p className="detail--article__error">
+            El personaje que buscas no existe
+          </p>
         </article>
       </div>
     );
