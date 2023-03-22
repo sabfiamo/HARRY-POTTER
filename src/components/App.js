@@ -30,6 +30,12 @@ function App() {
   const handleSubmit = (event) => {
     event.preventDefault();
   };
+  const handleOnClick = (event) => {
+    event.preventDefault();
+
+    setHouseFilter("Gryffindor");
+    setNameFilter("");
+  };
 
   //filtrado por párametros de entrada
   const characterFiltered = characterList
@@ -79,6 +85,8 @@ function App() {
                       handleFilterName={handleFilterName}
                       nameFilter={nameFilter}
                       handleSubmit={handleSubmit}
+                      handleOnClick={handleOnClick}
+                      houseFilter={houseFilter}
                     />
                     <ListCharacter
                       characterList={characterFiltered}

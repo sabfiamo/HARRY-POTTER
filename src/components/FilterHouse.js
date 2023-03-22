@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-function FilterHouse({ handleFilterHouse }) {
+function FilterHouse({ handleFilterHouse, houseFilter }) {
   const handleChange = (ev) => {
     const value = ev.target.value;
     handleFilterHouse(value);
@@ -14,6 +14,7 @@ function FilterHouse({ handleFilterHouse }) {
           name="house"
           id="house"
           onChange={handleChange}
+          value={houseFilter}
         >
           <option className="form--input__option" value="Gryffindor">
             Gryffindor
