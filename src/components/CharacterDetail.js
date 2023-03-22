@@ -1,7 +1,5 @@
 import { Link, useParams } from "react-router-dom";
 
-import "../styles/page/characterDetails.scss";
-
 function CharacterDetails({ findCharacter }) {
   const allParams = useParams();
   const characterId = allParams.id;
@@ -9,12 +7,14 @@ function CharacterDetails({ findCharacter }) {
 
   if (!characterFound) {
     return (
-      <article className="detail--article">
-        <h2 className="detail--article__term">Personaje no disponible</h2>
-        <p className="detail--article__term">
-          <Link to="/">Volver</Link>
-        </p>
-      </article>
+      <div className="detail">
+        <Link className="detail--button" to="/">
+          Volver
+        </Link>
+        <article className="detail--article">
+          <p className="detail--article__error">Personaje no disponible</p>
+        </article>
+      </div>
     );
   }
 

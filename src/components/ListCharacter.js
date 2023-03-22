@@ -12,7 +12,7 @@ function ListCharacter({ characterList, nameFilter }) {
 
     return (
       <section>
-        <span className="text--error">{mesaggeError}</span>
+        <span className="character--error">{mesaggeError}</span>
       </section>
     );
   } else {

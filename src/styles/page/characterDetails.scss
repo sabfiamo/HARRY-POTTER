@@ -2,32 +2,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-
-  padding: 20px;
+  align-items: flex-end;
 
   &--button {
-    font-weight: bold;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
     text-decoration: none;
-    align-items: center;
-    font-size: 1rem;
-    width: 150px;
+    font-size: 1.5rem;
     margin: 10px;
     color: white;
     text-align: center;
-    border: none;
-    height: 34px;
-    background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
-    border-radius: 40px;
-    padding: 10px;
-    transform: translatex(150px);
-
-    @media (min-width: 768px) {
-      transform: translatex(350px);
-    }
   }
 
   &--article {
@@ -61,6 +43,14 @@
       display: inline;
       list-style: none;
       font-size: 25px;
+    }
+    &__error {
+      grid-column: 1/3;
+      color: white;
+      font-size: 20px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
     }
   }
 }
