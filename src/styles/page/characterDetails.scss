@@ -50,17 +50,25 @@
         font-size: 1.9rem;
       }
     }
+    &__container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      @media (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
     &__list {
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding: 0 20px 20px 20px;
-      // padding-bottom: 10px;
     }
     &__term {
       font-weight: bold;
       color: white;
-      display: inline;
+
       list-style: none;
       font-size: 15px;
       @media (min-width: 768px) {
@@ -84,6 +92,14 @@
       margin: 20px;
       display: flex;
       justify-content: cente;
+    }
+    &__house {
+      width: 40px;
+      height: 40px;
+      @media (min-width: 768px) {
+        width: 100px;
+        height: 100px;
+      }
     }
   }
 }

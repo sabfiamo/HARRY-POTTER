@@ -35,5 +35,7 @@ function FilterHouse({ handleFilterHouse, houseFilter }) {
 }
 FilterHouse.propTypes = {
   handleFilterHouse: PropTypes.func.isRequired,
+  houseFilter: PropTypes.string.isRequired,
+  
 };
 export default FilterHouse;

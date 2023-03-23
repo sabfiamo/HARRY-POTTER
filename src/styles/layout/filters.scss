@@ -1,9 +1,18 @@
 .form {
-  display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 40px 40px;
+  column-gap: 10px;
+  min-width: 200px;
+  max-width: 250px;
+  @media (min-width: 768px) {
+    grid-template-columns: 100px 50 px;
+    grid-template-rows: 50px 50px;
+    column-gap: 40px;
+    padding: 20px;
+  }
 
   &--label {
     margin: 0 0 1px 0;
@@ -13,7 +22,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 220px;
+    min-width: 200px;
+    // width: 250px;
     @media (min-width: 768px) {
       width: 500px;
       font-size: 1.9rem;
@@ -42,6 +52,37 @@
     color: white;
     @media (min-width: 768px) {
       font-size: 1.9rem;
+    }
+  }
+  &--reset {
+    font-size: 1.5rem;
+    margin: 10px;
+    background-color: rgb(218, 139, 60);
+    color: white;
+    text-align: center;
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 1/2;
+
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+      width: 70px;
+      height: 70px;
+    }
+
+    &__icon {
+      color: white;
+      font-size: 2.2rem;
+
+      @media (min-width: 768px) {
+        font-size: 3.2rem;
+      }
     }
   }
 }

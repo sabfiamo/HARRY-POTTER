@@ -1,9 +1,7 @@
 import "../styles/App.scss";
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-
 import logoHarryPotter from "../images/harry-potter-logo.png";
-
 import getDataApi from "../services/api";
 import Filters from "./Filters";
 import ListCharacter from "./ListCharacter";

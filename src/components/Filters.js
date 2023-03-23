@@ -1,6 +1,7 @@
 import FilterName from "./FilterName";
 import FilterHouse from "./FilterHouse";
 import PropTypes from "prop-types";
+import Reset from "./Reset";
 
 function Filters({
   handleFilterHouse,
@@ -21,14 +22,7 @@ function Filters({
           handleFilterHouse={handleFilterHouse}
           houseFilter={houseFilter}
         />
-
-        <button
-          type="submit"
-          className="buttons-img__btn"
-          onClick={handleOnClick}
-        >
-          <i className="detail--article__icon fa-solid fa-chevron-left"></i>
-        </button>
+        <Reset handleOnClick={handleOnClick}></Reset>
       </form>
     </section>
   );
@@ -39,5 +33,6 @@ Filters.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   handleOnClick: PropTypes.func.isRequired,
   nameFilter: PropTypes.string.isRequired,
+  houseFilter: PropTypes.string.isRequired,
 };
 export default Filters;
