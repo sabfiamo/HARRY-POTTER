@@ -18,10 +18,7 @@ function ListCharacter({
         ? eachCharacter.name.toLowerCase().includes(nameFilter.toLowerCase())
         : eachCharacter;
     });
-  // .map((eachCharacter) => {
-  //   return (eachCharacter = translate(eachCharacter));
-  // });
-  //Ordenar por nombre de personaje
+  
   characterFiltered.sort((a, b) => a.name.localeCompare(b.name));
 
   //Construimos el Html
