@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# **Harry Potter characters**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ¿Qué esHarry Potter characters?
 
-## Available Scripts
+En este proyecto hemos realizado una aplicación web que permite obtener el listado de personajes de Harry Potter. Para eso, vamos a utilizar el servicio de https://hp-api.onrender.com/ que nos devuelve información sobre los personajes de
+Harry Potter filtrados por la casa a la que pertenece y por el nombre del personaje.
 
-In the project directory, you can run:
+## **¿Qué partes la conforman?**
 
-### `npm start`
+El proyecto consta de 2 páginas:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Una página landing donde se muestra el listado de personajes.
+- Una página con el detalle del personaje seleccionado.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+La aplicación funciona siguiendo estos pasos:
 
-### `npm test`
+1. La aplicación carga por defecto los personajes de la casa Gryffindor.
+1. Permite al usuario elegir una de las cuatro casas de Hogwarts mediante un input de tipo Select.
+1. Permite al usuario filtrar mediante un input de tipo Text por nombre del personaje.
+1. Permite borrar los valores introcidos mediente un botón de Reset.
+1. Al seleccionar uno de los personajes se carga una nueva página con el detalle: nombre del personaje, estatus, genero, especie y casa a la que pertece junto con su escudo.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Construido con 🛠️
 
-### `npm run build`
+- **REACT** - Framework de JavaScript
+- **HTML / CSS /JAVASCRIPT** - Lenguajes de programación
+- **SASS** - Preprocesador CSS
+- **AJAX / APIS** - Peticiones al servidor
+- **NPM** - Gestor de dependencias
+- **Git** - Control de verisones
+- **Starter Kit** - Kit
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Objectivos
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Comenzar a trabajar con React JS.
+- Uso avanzado de formularios HTML.
+- Maquetación usando CSS avanzado, como flex y grid.
+- Usar SASS
+- Trabajar con arrays y objetos
+- Uso de mediaqueries para que el diseño sea adaptable al dispositivo usando la estrategia mobile first
+- Usar funciones para estructurar el código
+- Modificar la información del DOM para añadir contenido dinámico
+- Escuchar eventos del DOM
+- Crear peticiones con fetch y promesas
+- Recuperar la respuesta del servidor y gestionar información en formato JSON
+- Usar DOM avanzado
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Guía de inicio rápido
 
-### `npm run eject`
+> **NOTA:** Necesitas tener instalado [Node JS](https://nodejs.org/) para trabajar con el Starter Kit.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Pasos para arrancar el proyecto:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Clona el repositorio.**
+- **Instala las dependencias locales.** Ejecutando en la terminal el comando:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm install react-router-dom
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Arranca el proyecto.** Ejecuta el comando:
 
-## Learn More
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Este comando:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Abre una ventana de Chrome y muestra tu página web**, al igual que hace el plugin de VS Code Live Server (Go live).
+- También **procesa los ficheros** REACT, HTML, SASS / CSS y JS y los **genera y guarda en la carpeta `public/`**.
 
-### Code Splitting
+### Pasos para publicar el proyecto en GitHub Pages:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Añadir al package.json la línea "homepage": "./".
+- Añadir a los scripts del package.json la línea:
+  "githubpages": "rm -rf build && rm -rf docs && npm run build && mv build docs && git add docs/\* && git commit -m \"Publish in GitHub Pages\" && git push"
+- Ejecutar en la terminal npm run githubpages
 
-### Analyzing the Bundle Size
+Sube a tu repo, en el apartado de GitHub Pages, la carpeta `docs/` que se te acaba de generar.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Autor ✒️
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Mónica Saborido](https://github.com/sabfiamo)

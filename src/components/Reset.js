@@ -11,7 +11,4 @@ Reset.propTypes = {
   handleOnClick: PropTypes.func.isRequired,
 };
 
-Reset.propTypes = {
-  handleOnClick: PropTypes.func.isRequired,
-};
 export default Reset;

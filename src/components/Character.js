@@ -12,10 +12,8 @@ function Character({ eachCharacter }) {
           title="Foto de personaje de HArry Potter"
         ></img>
         <h4 className="character--title">{eachCharacter.name}</h4>
-        {/* <p className="character--description">{eachCharacter.alive}</p> */}
         <p className="character--description">{eachCharacter.species}</p>
-        {/* <p className="character--description">{eachCharacter.gender}</p> */}
-        {/* <p className="character--description">{eachCharacter.house}</p> */}
+        <p className="character--description">{eachCharacter.alive}</p>
       </li>
     </Link>
   );

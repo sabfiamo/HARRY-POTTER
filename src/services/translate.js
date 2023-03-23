@@ -1,4 +1,5 @@
 function translate(data) {
+  // console.log(data);
   let aliveSpanish = "";
   const genderSpanish =
     data.gender.toLowerCase() === "female" ? "Mujer" : "Hombre";

@@ -1,11 +1,12 @@
 import "../styles/App.scss";
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import logoHarryPotter from "../images/harry-potter-logo.png";
+
 import getDataApi from "../services/api";
 import Filters from "./Filters";
 import ListCharacter from "./ListCharacter";
 import CharacterDetail from "./CharacterDetail";
+import Header from "./Header";
 
 function App() {
   const [characterList, setCharacterList] = useState([]);
@@ -22,6 +23,7 @@ function App() {
   const handleFilterHouse = (value) => {
     setHouseFilter(value);
   };
+
   const handleFilterName = (value) => {
     setNameFilter(value);
   };
@@ -35,20 +37,6 @@ function App() {
     setNameFilter("");
   };
 
-  //filtrado por párametros de entrada
-  const characterFiltered = characterList
-    .filter((eachCharacter) => {
-      return eachCharacter.house === houseFilter;
-    })
-    .filter((eachCharacter) => {
-      return nameFilter
-        ? eachCharacter.name.toLowerCase().includes(nameFilter.toLowerCase())
-        : eachCharacter;
-    });
-
-  //Ordenar por nombre
-  characterFiltered.sort((a, b) => a.name.localeCompare(b.name));
-
   // conseguir el id de la ruta
   const findCharacter = (characterId) => {
     const characterFound = characterList.find(
@@ -61,13 +49,7 @@ function App() {
       {
         /* Aquí va el HTML */
         <>
-          <header className="header">
-            <img
-              className="header--image"
-              src={logoHarryPotter}
-              alt="Logo de HarryPotter"
-            />
-          </header>
+          <Header />
           <main className="main">
             <Routes>
               <Route
@@ -87,8 +69,9 @@ function App() {
                       houseFilter={houseFilter}
                     />
                     <ListCharacter
-                      characterList={characterFiltered}
+                      characterList={characterList}
                       nameFilter={nameFilter}
+                      houseFilter={houseFilter}
                     />
                   </>
                 }

@@ -6,7 +6,7 @@ function FilterHouse({ handleFilterHouse, houseFilter }) {
   };
 
   return (
-    <div>
+    <div className="house">
       <label className="form--label " htmlFor="house">
         Selecciona la casa:
         <select
@@ -36,6 +36,5 @@ function FilterHouse({ handleFilterHouse, houseFilter }) {
 FilterHouse.propTypes = {
   handleFilterHouse: PropTypes.func.isRequired,
   houseFilter: PropTypes.string.isRequired,
-  
 };
 export default FilterHouse;

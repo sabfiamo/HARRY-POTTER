@@ -6,7 +6,7 @@ function FilterName({ handleFilterName, nameFilter }) {
   };
 
   return (
-    <div>
+    <div className="name">
       <label className="form--label " htmlFor="house">
         Busca por personaje:
         <input

@@ -1,4 +1,5 @@
 import translate from "../services/translate";
+import imageCharacterNotExit from "../images/simbolo-harry.png";
 
 const getDataApi = (house) => {
   return fetch(`https://hp-api.onrender.com/api/characters/house/${house}`)
@@ -13,7 +14,7 @@ const getDataApi = (house) => {
           house: eachCharacter.house,
           image: eachCharacter.image
             ? eachCharacter.image
-            : `https://via.placeholder.com/210x295/ffffff/666666/?text=HarryPotter`,
+            : imageCharacterNotExit,
           alive: eachCharacter.alive,
           gender: eachCharacter.gender,
           alternate_names: eachCharacter.alternate_names,
