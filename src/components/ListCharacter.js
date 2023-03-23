@@ -1,6 +1,5 @@
 import Character from "./Character";
 import PropTypes from "prop-types";
-import translate from "../services/translate";
 
 function ListCharacter({
   characterList,
@@ -18,7 +17,7 @@ function ListCharacter({
         ? eachCharacter.name.toLowerCase().includes(nameFilter.toLowerCase())
         : eachCharacter;
     });
-  
+
   characterFiltered.sort((a, b) => a.name.localeCompare(b.name));
 
   //Construimos el Html

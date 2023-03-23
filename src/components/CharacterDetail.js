@@ -24,6 +24,7 @@ function CharacterDetails({ findCharacter }) {
     );
   } else {
     //Si encuentra el personaje lo pinta en Html
+    console.log(characterFound.alive);
     return (
       <div className="detail">
         <Link className="detail--button" to="/">
