@@ -2,7 +2,7 @@
 
 ## ¿Qué es Harry Potter characters?
 
-En este proyecto hemos realizado una aplicación web que permite obtener el listado de personajes de Harry Potter. Para eso, vamos a utilizar el servicio de [https://hp-api.onrender.com/](https://hp-api.onrender.com/). Con [https://github.com/sabfiamo](https://hp-api.onrender.com/api/characters/house/gryffindor) nos devuelve información sobre los personajes de
+En este proyecto hemos realizado una aplicación web que permite obtener el listado de personajes de Harry Potter. Para eso, vamos a utilizar el servicio de [https://hp-api.onrender.com/](https://hp-api.onrender.com/). Con [https://hp-api.onrender.com/api/characters/house/gryffindor](https://hp-api.onrender.com/api/characters/house/gryffindor) nos devuelve información sobre los personajes de
 Harry Potter filtrados por la casa a la que pertenece y por el nombre del personaje.
 
 ## **¿Qué partes la conforman?**
