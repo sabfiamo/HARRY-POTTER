@@ -18,7 +18,8 @@
     margin: 0 0 1px 0;
     padding: 5px 5px 5px 0;
     font-size: 1.5rem;
-    color: white;
+    font-weight: bold;
+    color: rgb(218, 139, 60);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,8 +37,9 @@
     border: 0.8px solid rgb(218, 139, 60);
     font-size: 1.3rem;
     outline: none;
-    background-color: grey;
-    color: white;
+    background-color: rgb(241, 213, 184);
+    color: rgb(218, 139, 60);
+    font-weight: bold;
     width: 90px;
     @media (min-width: 768px) {
       width: 300px;
@@ -48,8 +50,9 @@
   }
   &--input__option {
     font-size: 1.3rem;
-    background-color: grey;
-    color: white;
+    background-color: rgb(241, 213, 184);
+    color: rgb(218, 139, 60);
+    font-weight: bold;
     @media (min-width: 768px) {
       font-size: 1.9rem;
     }

@@ -1,7 +1,15 @@
 .App {
-  background-color: grey;
+  background-size: contain;
+  background-repeat: repeat;
   padding: 10px 10px 0px 10px;
   min-height: 100vh;
+  background-color: rgb(218, 139, 60);
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.15)
+  );
   @media (min-width: 768px) {
     padding: 20px;
   }
