@@ -6,7 +6,7 @@ function Character({ eachCharacter }) {
     <Link className="character--link" to={"/character/" + eachCharacter.id}>
       <li className="character--li">
         <img
-          className="character__img"
+          className="character--img"
           src={eachCharacter.image}
           alt="Foto de personaje de Harry Potter"
           title="Foto de personaje de HArry Potter"

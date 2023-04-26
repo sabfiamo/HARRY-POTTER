@@ -20,6 +20,7 @@
     background-color: rgb(218, 139, 60);
     overflow: hidden;
     width: 110px;
+
     @media (min-width: 768px) {
       width: 220px;
     }
@@ -32,6 +33,7 @@
   }
   &--img {
     width: 100%;
+    height: 400px;
   }
 
   &--title {

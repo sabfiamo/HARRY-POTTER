@@ -69,6 +69,7 @@
     align-items: center;
     grid-column: 2;
     grid-row: 1/2;
+    cursor: pointer;
 
     @media (min-width: 768px) {
       font-size: 2.5rem;
